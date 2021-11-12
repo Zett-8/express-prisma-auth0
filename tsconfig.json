@@ -4,9 +4,9 @@
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
-    "rootDir": "./index.ts",
     "outDir": "./dist",
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "sourceMap": true
   }
 }

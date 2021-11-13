@@ -3,10 +3,11 @@
   "exclude": ["./node_modules", "./dist"],
   "compilerOptions": {
     "target": "es6",
-    "module": "esnext",
+    "module": "commonjs",
     "outDir": "./dist",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "sourceMap": true
+    "sourceMap": true,
+    "strict": true
   }
 }

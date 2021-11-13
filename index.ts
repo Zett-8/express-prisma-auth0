@@ -1,11 +1,13 @@
-const express = require('express')
-const app = express()
-const PORT = 3333
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({
+    path: '.env.development',
+  })
+}
 
-app.get('/', (req, res) => {
-  res.send('Hello world')
-})
+import { app } from './src/app'
+
+const PORT = process.env.PORT || 3333
 
 app.listen(PORT, () => {
-  console.log('server is running on :3333')
+  console.log(`server is running on :${PORT}. env="${process.env.NODE_ENV}"`)
 })

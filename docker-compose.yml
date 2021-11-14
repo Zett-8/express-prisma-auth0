@@ -1,5 +1,5 @@
 services:
-  node-server:
+  server:
     container_name: node-server
     build:
       context: .
@@ -8,3 +8,19 @@ services:
       - 3333:3333
     volumes:
       - .:/usr/src/app
+    depends_on:
+      - db
+
+  db:
+    container_name: db-postgres
+    image: postgres:13
+    volumes:
+      - ./postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=app
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    restart: always

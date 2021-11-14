@@ -1,0 +1,49 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "local": "export NODE_ENV=development && webpack serve --mode development --port 8000",
+    "dev": "export NODE_ENV=development && webpack serve --mode development --port 8000",
+    "prod": "export NODE_ENV=production && webpack serve --mode development --port 8000",
+    "build:prod": "export NODE_ENV=production && webpack --mode production",
+    "build:dev": "export NODE_ENV=development && webpack --mode development",
+    "build:local": "export NODE_ENV=local && webpack --mode development",
+    "lint": "eslint . --quiet",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\""
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-router-dom": "^5.3.2",
+    "@types/styled-components": "^5.1.15",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.4.1",
+    "react-svg-loader": "^3.0.3",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.64.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^6.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}

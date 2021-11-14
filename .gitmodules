@@ -1,0 +1,3 @@
+[submodule "front"]
+	path = front
+	url = git@github.com:Zett-8/react-boilerplate.git

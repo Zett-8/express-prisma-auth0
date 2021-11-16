@@ -55,6 +55,11 @@ AUDIENCE: Auth0 dashboard -> APIs -> API Audience
 *Do not forget to put trailing slash at the end of ISSUER and AUDIENCE.  
 Don't know why but without trailing slash, it didn't work well in my case.
 
+<img src="https://github.com/Zett-8/images/blob/master/express-prisma-auth0/sc_auth0.jpg" />
+
+
+
+
 ## Prisma commands
 
 ### Create migrations

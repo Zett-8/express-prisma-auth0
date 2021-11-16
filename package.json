@@ -10,8 +10,9 @@
     "docker:up": "docker-compose up",
     "docker:down": "docker-compose down",
     "generate": "prisma generate",
-    "migrate": "prisma migrate dev",
-    "seed": "prisma db seed",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed",
+    "db:reset": "prisma migrate reset",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {

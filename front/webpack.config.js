@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-require('dotenv').config({ path: '../.env.development' })
+require('dotenv').config({ path: '../.env' })
 
 module.exports = {
   resolve: {

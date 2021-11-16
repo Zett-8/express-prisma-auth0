@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express'
+import express from 'express'
 import cors from 'cors'
 
 import { jwtCheck } from './utils/jwtCheck'
@@ -10,9 +10,7 @@ export const app = express()
 app.use(cors({ credentials: true }))
 app.use(express.json())
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello world')
-})
+app.use(express.static('front/dist'))
 
 app.use('/city', cityRouter)
 app.use('/todo', jwtCheck, todoRouter)

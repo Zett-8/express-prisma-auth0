@@ -4,10 +4,16 @@
 
 #### Create migrations
 ```shell
-npx prisma migrate dev
+prisma migrate dev
 ```
 
 #### Apply all migration files to prod
 ```shell
-npx prisma migrate deploy
+prisma migrate deploy
+```
+
+#### Generate prisma client
+*need to run this command after editing schema
+```shell
+prisma generate
 ```

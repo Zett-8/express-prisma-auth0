@@ -11,6 +11,21 @@ const todoData: Prisma.TodoCreateInput[] = [
   },
 ]
 
+const cityData: Prisma.CityCreateInput[] = [
+  {
+    title: 'Tokyo',
+  },
+  {
+    title: 'London',
+  },
+  {
+    title: 'Paris',
+  },
+  {
+    title: 'Berlin',
+  },
+]
+
 async function main() {
   console.log(`Start seeding ...`)
   for (const t of todoData) {
@@ -18,6 +33,13 @@ async function main() {
       data: t,
     })
     console.log(`Created todo with id: ${todo.id}`)
+  }
+
+  for (const c of cityData) {
+    const city = await prisma.city.create({
+      data: c,
+    })
+    console.log(`Created city with id: ${city.id}`)
   }
   console.log(`Seeding finished.`)
 }

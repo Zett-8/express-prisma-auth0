@@ -16,7 +16,9 @@ export const LandingPageContainer = () => {
     })
   }
 
-  const get = async () => {
+  const get = async (path: string) => {
+    setServerRes('fetching...')
+
     const token = await getAccessTokenSilently()
       .then((res) => res)
       .catch((err) => {
@@ -25,7 +27,7 @@ export const LandingPageContainer = () => {
       })
 
     axios
-      .get('http://localhost:3333/todo', {
+      .get(`http://localhost:3333/${path}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,6 +41,15 @@ export const LandingPageContainer = () => {
   return (
     <div>
       <h1>Express + Prisma + Auth0 Demo</h1>
+
+      <div style={{ marginBottom: '24px' }}>
+        Login credential
+        <br />
+        email: test@gmail.com
+        <br />
+        password: Password1234!
+      </div>
+
       <button onClick={() => loginWithRedirect()}>Login</button>
       <button onClick={() => logout({ returnTo: window.location.origin })}>Logout</button>
 
@@ -48,7 +59,9 @@ export const LandingPageContainer = () => {
       </Res>
 
       <h2>API</h2>
-      <button onClick={get}>GET</button>
+      <button onClick={() => get('city')}>GET (Public)</button>
+      <button onClick={() => get('todo')}>GET (Auth required)</button>
+      <button onClick={() => setServerRes({})}>CLEAR</button>
 
       <Res>
         <div>Server Response</div>

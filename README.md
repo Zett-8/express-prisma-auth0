@@ -1,5 +1,13 @@
 # Express + Prisma + Auth0
 
+## [💻 Demo](https://express-prisma-auth0.herokuapp.com/)
+
+## Requirements
+
+[Express](https://expressjs.com/)   
+[Prisma](https://www.prisma.io/)  
+[Auth0](https://auth0.com/)  
+
 ## Protect endpoints 
 Tricky part is here
 

@@ -70,9 +70,13 @@ Don't know why but without trailing slash, it didn't work well in my case.
 
 ## Prisma commands
 
-### Create migrations
+### Migrate in Dev environment
 ```shell
 prisma migrate dev
+```
+### Create migrations
+```shell
+prisma migrate dev --create-only
 ```
 
 ### Apply all migration files to prod
